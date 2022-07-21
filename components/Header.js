@@ -1,23 +1,33 @@
+import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   return (
-    <header className="top-0 bg-black/5 flex justify-around p-4">
+    <header className="tw-top-0 tw-flex tw-justify-end tw-p-5">
       <div>
         <Link href="/">
-          <a>Michael Yogar</a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/">
-          <a className="mr-4 hover:underline underline-offset-4">Home</a>
+          <Button
+            as="a"
+            colorScheme="cyan"
+            variant={router.asPath === "/" ? "solid" : "ghost"}
+            fontWeight="normal"
+            className="tw-mr-2"
+          >
+            Home
+          </Button>
         </Link>
         <Link href="/blog">
-          <a className="mr-4 hover:underline underline-offset-4">Blog</a>
-        </Link>
-        <Link href="/about">
-          <a className="hover:underline underline-offset-4">About</a>
+          <Button
+            as="a"
+            colorScheme="cyan"
+            variant={router.asPath.startsWith("/blog") ? "solid" : "ghost"}
+            fontWeight="normal"
+          >
+            Blog
+          </Button>
         </Link>
       </div>
     </header>
