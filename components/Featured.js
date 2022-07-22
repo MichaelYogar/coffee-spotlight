@@ -1,18 +1,16 @@
-import { Divider, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Featured = ({ post }) => {
-  console.log(post);
   return (
     <>
-      <div>
+      <Box>
         <Heading as="h2" size="xl" className="tw-mb-5">
-          Featured Post
+          Recent Posts
         </Heading>
-      </div>
-      <Divider />
-      <div>
-        <Stack spacing={2} className="tw-mt-5">
+      </Box>
+      <Box>
+        <Stack spacing={2}>
           <Heading as="h3" size="lg">
             {post.meta.title}
           </Heading>
@@ -21,7 +19,7 @@ const Featured = ({ post }) => {
           </Text>
           <Text>{post.meta.excerpt}</Text>
         </Stack>
-      </div>
+      </Box>
     </>
   );
 };
