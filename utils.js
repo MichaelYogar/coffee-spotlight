@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { sync } from "glob";
-const POST_PATH = path.join(process.cwd(), "pages", "posts");
 import matter from "gray-matter";
+
+const POST_PATH = path.join(process.cwd(), "pages", "blog");
 
 export const getPostFromSlug = (slug) => {
   const buffer = fs.readFileSync(`${POST_PATH}/${slug}.mdx`);
@@ -15,6 +16,7 @@ export const getPostFromSlug = (slug) => {
       title: data.title ?? slug,
       tags: (data.tags ?? []).sort(),
       publish_date: (data.publish_date ?? new Date()).toString(),
+      read_time: data.read_time ?? "",
     },
   };
 };
