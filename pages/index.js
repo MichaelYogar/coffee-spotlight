@@ -1,26 +1,24 @@
-import Post from "../components/Post";
-import { getAllPosts } from "../utils";
+import { Flex } from "@chakra-ui/react";
+import Featured from "../components/Featured";
+import { getPostFromSlug } from "../utils";
+import AboutMe from "../components/AboutMe";
 
-export default function Home({ posts }) {
+export default function Home({ post }) {
   return (
     <>
-      <div>
-        {posts.map((post) => (
-          <Post key={post.meta.title} post={post}>
-            {post.meta.title}
-          </Post>
-        ))}
-      </div>
+      <Flex className="tw-flex-col">
+        <AboutMe />
+        <Featured grow post={post} />
+      </Flex>
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  const posts = getAllPosts();
-  console.log(posts);
+  const post = getPostFromSlug("about");
   return {
     props: {
-      posts,
+      post,
     },
   };
 }
