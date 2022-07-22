@@ -1,10 +1,12 @@
-import { Flex, Button } from "@chakra-ui/react";
+import { Flex, Button, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Flex top="0" justify="end" p={5}>
       <Link href="/">
@@ -26,6 +28,9 @@ const Header = () => {
           Blog
         </Button>
       </Link>
+      <Button onClick={toggleColorMode}>
+        Toggle {colorMode === "light" ? "Dark" : "Light"}
+      </Button>
     </Flex>
   );
 };
