@@ -1,5 +1,5 @@
-import PostListItem from "../components/PostListItem";
-import { getAllPosts } from "../utils";
+import PostListItem from "../../components/PostListItem";
+import { getAllPosts } from "../../utils";
 
 export default function Blog({ posts }) {
   return (

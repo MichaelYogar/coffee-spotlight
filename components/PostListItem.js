@@ -7,7 +7,7 @@ const Post = ({ post }) => {
       <span>{post.meta.publish_date}</span>
       <span> » </span>
       <span>
-        <Link href={`posts/${post.meta.slug}`}>
+        <Link href={`blog/${post.meta.slug}`}>
           <a className="hover:tw-underline tw-underline-offset-2 tw-text-blue-600">
             {post.meta.title}
           </a>
