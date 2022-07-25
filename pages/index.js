@@ -8,7 +8,7 @@ export default function Home({ post }) {
     <>
       <Flex className="tw-flex-col">
         <AboutMe />
-        <Featured grow post={post} />
+        <Featured post={post} />
       </Flex>
     </>
   );

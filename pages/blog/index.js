@@ -1,21 +1,22 @@
+import { Box, UnorderedList } from "@chakra-ui/react";
 import PostListItem from "../../components/PostListItem";
 import { getAllPosts } from "../../utils";
 
 export default function Blog({ posts }) {
   return (
     <>
-      <div>
+      <Box>
         <h1>Blog</h1>
-        <div className="p-2 ml-6">
-          <ul className="list-outside list-disc ">
+        <Box p={2}>
+          <UnorderedList>
             {posts.map((post) => (
               <PostListItem key={post.meta.title} post={post}>
                 {post.meta.title}
               </PostListItem>
             ))}
-          </ul>
-        </div>
-      </div>
+          </UnorderedList>
+        </Box>
+      </Box>
     </>
   );
 }
