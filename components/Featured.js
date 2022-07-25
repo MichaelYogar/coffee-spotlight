@@ -5,7 +5,7 @@ const Featured = ({ post }) => {
   return (
     <>
       <Box>
-        <Heading as="h2" size="xl" className="tw-mb-5">
+        <Heading as="h2" size="xl" mb={5}>
           Recent Posts
         </Heading>
       </Box>

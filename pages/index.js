@@ -6,7 +6,7 @@ import AboutMe from "../components/AboutMe";
 export default function Home({ post }) {
   return (
     <>
-      <Flex className="tw-flex-col">
+      <Flex direction="column">
         <AboutMe />
         <Featured post={post} />
       </Flex>
