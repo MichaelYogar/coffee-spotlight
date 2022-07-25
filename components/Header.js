@@ -2,6 +2,7 @@ import { Flex, Button, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const Header = () => {
   const router = useRouter();
@@ -24,13 +25,12 @@ const Header = () => {
           colorScheme="cyan"
           variant={router.asPath.startsWith("/blog") ? "solid" : "ghost"}
           fontWeight="normal"
+          marginRight={2}
         >
           Blog
         </Button>
       </Link>
-      <Button onClick={toggleColorMode}>
-        Toggle {colorMode === "light" ? "Dark" : "Light"}
-      </Button>
+      <ThemeToggleButton />
     </Flex>
   );
 };
