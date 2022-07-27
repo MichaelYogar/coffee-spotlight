@@ -1,4 +1,4 @@
-import { ListItem } from "@chakra-ui/react";
+import { ListItem, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import React from "react";
 
@@ -9,9 +9,7 @@ const Post = ({ post }) => {
       <span> » </span>
       <span>
         <NextLink href={`blog/${post.meta.slug}`}>
-          <a className="hover:tw-underline tw-underline-offset-2 tw-text-blue-600">
-            {post.meta.title}
-          </a>
+          <Link>{post.meta.title}</Link>
         </NextLink>
       </span>
     </ListItem>

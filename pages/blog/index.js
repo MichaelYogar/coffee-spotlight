@@ -1,4 +1,4 @@
-import { Box, UnorderedList } from "@chakra-ui/react";
+import { Box, UnorderedList, Heading } from "@chakra-ui/react";
 import PostListItem from "../../components/PostListItem";
 import { getAllPosts } from "../../utils";
 
@@ -6,7 +6,7 @@ export default function Blog({ posts }) {
   return (
     <>
       <Box>
-        <h1>Blog</h1>
+        <Heading>Blog</Heading>
         <Box p={2}>
           <UnorderedList>
             {posts.map((post) => (
