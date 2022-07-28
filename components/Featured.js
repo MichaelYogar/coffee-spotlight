@@ -6,7 +6,7 @@ const Featured = ({ post }) => {
     <>
       <Box>
         <Heading as="h2" size="xl" mb={5}>
-          Recent Posts
+          Most Recent Posts
         </Heading>
       </Box>
       <Box>
