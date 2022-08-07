@@ -1,6 +1,3 @@
 # Coffee Spotlight
 
-[ ] Add support for mdx
-[ ] Create pages/posts folder
-[ ] Get an example page going
-[ ] Get layout going with sticky header
+Currently writing articles. You can check out the current UI at [coffeespotlight.vercel.app](coffeespotlight.vercel.app)!
